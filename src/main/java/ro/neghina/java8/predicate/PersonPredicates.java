@@ -20,7 +20,9 @@ public class PersonPredicates {
     }
 
     public static List<Person> filterPersonsStream(final List<Person> persons, Predicate<Person> filter) {
-        return persons.stream().filter(filter).collect(Collectors.toList());
+        return persons.stream()
+                .filter(filter)
+                .collect(Collectors.toList());
     }
 
     public static List<Person> filterPersons(final List<Person> persons, Predicate<Person> predicate) {
