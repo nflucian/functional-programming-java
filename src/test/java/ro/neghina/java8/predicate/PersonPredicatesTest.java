@@ -34,6 +34,13 @@ public class PersonPredicatesTest {
     }
 
     @Test
+    public void filterPersonWithAgeMoreThan() {
+        List<Person> result = filterPersonsStream(persons, isAgeMoreThan(30));
+
+        assertEquals("should return the persons older than", 1, result.size());
+    }
+
+    @Test
     public void onlyPersonWithAgeMoreThan() {
         List<Person> result = filterPersons(persons, isAgeMoreThan(30));
 
